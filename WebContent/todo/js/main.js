@@ -1,0 +1,1 @@
+console.log("AMD feature enabled!!!");
