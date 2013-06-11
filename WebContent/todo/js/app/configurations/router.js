@@ -1,5 +1,8 @@
-define(['app/views/content.views','backbone'
-], function(contentViews){
+define([
+    'app/configurations/application',
+    'app/views/content.views',
+    'backbone'
+], function(app, ContentViews){
 	
 	var Router = Backbone.Router.extend({
 	    

@@ -3,8 +3,9 @@ requirejs.config({
        jquery: "libs/jquery-1.9.0",
        underscore: "libs/underscore",
        backbone: "libs/backbone",
-       router: "app/configurations/router"
-       
+       router: "app/configurations/router",
+       marionette: "libs/backbone.marionette",
+       text: "libs/text"
     },
     
     // We shim Backbone since it doesn't an AMD module
@@ -17,11 +18,15 @@ requirejs.config({
             exports: '_'
         },
         
-        
         backbone: {
             deps: ['jquery', 'underscore'],
             exports: 'Backbone'
         },
+        
+        marionette: {
+            deps: ['jquery', 'underscore', 'backbone'],
+            exports: 'Marionette'
+        }
     }
 });
 
