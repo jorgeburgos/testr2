@@ -43,3 +43,25 @@
 #todo-list li.editing input[type='text'] {
     display: block;
 }
+
+/*
+    remove todo item
+----------------------------------*/
+#todo-list .destroy {
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: url("../img/destroy.png") no-repeat;
+    top: 22px;
+    display: none;
+}
+
+#todo-list li:hover .destroy {
+    display: block;
+}
+
+#todo-list .destroy:hover {
+    background-position: 0 -20px;
+}

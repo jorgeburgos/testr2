@@ -11,6 +11,7 @@ define([
             'dblclick .view': 'edit',
             'blur .edit': 'saveAndClose',
             'keypress .edit': 'updateOnEnter',
+            'click a.destroy': 'clear'
         },
         
         ui: {
@@ -48,7 +49,9 @@ define([
             this.saveAndClose();
         },
         
-       
+        clear: function() {
+            this.model.destroy();
+        }
 
     });
     
