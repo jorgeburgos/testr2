@@ -19,3 +19,27 @@
     color: #777;
     text-decoration: line-through;
 }
+
+/*
+    Edit todo item
+----------------------------------*/
+#todo-list li.editing {
+    padding-right: 0;
+}
+
+#todo-list li.viewing .view {
+    display: block;
+}
+
+#todo-list li.viewing input[type='text'] {
+    display: none;
+}
+
+
+#todo-list li.editing .view {
+    display: none;
+}
+
+#todo-list li.editing input[type='text'] {
+    display: block;
+}
