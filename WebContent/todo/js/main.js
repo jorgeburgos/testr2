@@ -5,7 +5,8 @@ requirejs.config({
        backbone: "libs/backbone",
        router: "app/configurations/router",
        marionette: "libs/backbone.marionette",
-       text: "libs/text"
+       text: "libs/text",
+       "backbone.localStorage": "libs/backbone.localStorage",
     },
     
     // We shim Backbone since it doesn't an AMD module
