@@ -1,8 +1,9 @@
 define([
     'app/configurations/application',
     'app/views/content.views',
+    'app/models/todos.collection',
     'backbone'
-], function(app, ContentViews){
+], function(app, ContentViews, TodosCollection){
 	
 	var Router = Backbone.Router.extend({
 	    
@@ -12,8 +13,12 @@ define([
                 footer: '#todoapp > footer'
             });
             
-            var contentViews = new ContentViews();
+            
+            var todosCollection = new TodosCollection([{title: "test item"}]);
+            var contentViews = new ContentViews({collection: todosCollection});
             app.content.show(contentViews);
+            
+            //todosCollection.fetch();
         },
 	    
 	    routes: {
